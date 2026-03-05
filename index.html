@@ -18,12 +18,13 @@
   <meta name="description" content="Service Desk Sim is deploying soon. MegaCorp prelaunch mode is active." />
   <meta property="og:title" content="Service Desk Sim | Coming Soon" />
   <meta property="og:description" content="MegaCorp rollout is in controlled prelaunch mode. Launch soon." />
-  <meta property="og:image" content="SDSV2LogoV2_1440px2x.png" />
+  <meta property="og:image" content="https://servicedesksim.com/SDSV2LogoV2_1440px2x.png" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://servicedesksim.com/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Service Desk Sim | Coming Soon" />
   <meta name="twitter:description" content="MegaCorp rollout is in controlled prelaunch mode. Launch soon." />
-  <meta name="twitter:image" content="SDSV2LogoV2_1440px2x.png" />
+  <meta name="twitter:image" content="https://servicedesksim.com/SDSV2LogoV2_1440px2x.png" />
   <link rel="icon" type="image/webp" href="MegaCorpFavicon.webp" />
   <link rel="icon" type="image/png" href="MegaCorpFavicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,80 +97,47 @@
     }
     .intake .submit-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .3rem; }
     .intake-note { margin-top: .42rem; color: #93c5fd; font-family: var(--mono); font-size: .76rem; }
-    .formkit-form[data-uid="d97c4d2216"] {
-      max-width: 100% !important;
-      margin: .1rem 0 0 !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] [data-style="clean"] {
-      padding: 0 !important;
-      background: transparent !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-fields {
-      gap: .5rem !important;
-      align-items: stretch !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-field {
-      margin: 0 !important;
-      flex: 1 1 320px !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-input {
-      border: 1px solid rgba(148,163,184,.4) !important;
-      background: rgba(15,23,42,.78) !important;
-      color: #e5e7eb !important;
-      border-radius: 10px !important;
-      padding: .68rem .74rem !important;
-      font-family: var(--sans) !important;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.03) !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-input::placeholder {
-      color: #9fb3d8 !important;
-      opacity: .95 !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-submit {
-      margin: 0 !important;
-      border: 1px solid rgba(59,130,246,.8) !important;
-      border-radius: 999px !important;
-      background: linear-gradient(135deg, #1e40af, #3b82f6) !important;
-      color: #eff6ff !important;
-      font-weight: 700 !important;
-      letter-spacing: .01em !important;
-      min-width: 190px !important;
-      box-shadow: 0 8px 18px rgba(30,64,175,.32) !important;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-submit:hover {
-      transform: translateY(-1px) !important;
-      border-color: rgba(147,197,253,.95) !important;
-      box-shadow: 0 12px 26px rgba(30,64,175,.4) !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-submit > span {
-      padding: .68rem 1.08rem !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-powered-by-convertkit-container {
-      justify-content: flex-start !important;
-      margin-top: .46rem !important;
-    }
-    .formkit-form[data-uid="d97c4d2216"] .formkit-powered-by-convertkit {
-      opacity: .65 !important;
-    }
     .btn {
-      text-decoration: none; border: 1px solid rgba(148,163,184,.35); border-radius: 999px;
-      padding: .56rem .86rem; color: #e2e8f0; background: rgba(15,23,42,.55); font-size: .9rem;
+      text-decoration: none;
+      border: 1px solid rgba(148,163,184,.35);
+      border-radius: 999px;
+      padding: .56rem .86rem;
+      color: #e2e8f0;
+      background: rgba(15,23,42,.55);
+      font-size: .9rem;
       cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
     }
-    .btn.primary { background: linear-gradient(135deg, #1e40af, #3b82f6); border-color: rgba(59,130,246,.75); color: #eff6ff; }
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(148,163,184,.55);
+      box-shadow: 0 6px 16px rgba(2,6,23,.35);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      border-color: rgba(59,130,246,.75);
+      color: #eff6ff;
+    }
+    .btn.primary:hover {
+      border-color: rgba(147,197,253,.95);
+      box-shadow: 0 12px 26px rgba(30,64,175,.4);
+    }
+    .btn:focus-visible,
+    .intake-note a:focus-visible {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
     @media (max-width: 680px) {
-      .actions .btn, .intake .btn { width: 100%; text-align: center; }
-      .formkit-form[data-uid="d97c4d2216"] .formkit-field,
-      .formkit-form[data-uid="d97c4d2216"] .formkit-submit { flex: 1 1 100% !important; width: 100% !important; }
+      .actions .btn { width: 100%; text-align: center; }
     }
   </style>
 </head>
+<body>
 <main class="soon-card" aria-label="Coming soon announcement">
     <section class="brand">
       <picture>
         <source srcset="SDSV2LogoV2_1440px2x.webp" type="image/webp" />
-        <img src="SDSV2LogoV2_1440px2x.png" alt="Service Desk Sim logo" />
+        <img src="SDSV2LogoV2_1440px2x.png" alt="Service Desk Sim logo" width="2263" height="880" />
       </picture>
       <p class="mono">MEGACORP DEPLOYMENT STATUS: PRELAUNCH MODE</p>
     </section>
@@ -186,18 +154,24 @@
     <section class="intake" id="update-ticket">
       <h2>Request Launch Transmission Access</h2>
       <p>Register your email to receive MegaCorp prelaunch advisories, release alerts, and deployment updates.</p>
-      <div style="position: relative; width: 100%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: rgba(7,17,31,.75);">
+      <div aria-live="polite" style="position: relative; width: 100%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); background: rgba(7,17,31,.75);">
         <iframe
           data-tally-src="https://tally.so/embed/VLZA4M?alignLeft=1&hideTitle=1&dynamicHeight=1"
           loading="lazy"
           width="100%"
-          height="220"
+          height="280"
           frameborder="0"
           marginheight="0"
           marginwidth="0"
           title="Service Desk Sim - Ticket Story Intake"
-          style="display:block;border:0;width:100%;"
+          style="display:block;border:0;width:100%;min-height:220px;"
         ></iframe>
+        <noscript>
+          <p style="padding: .8rem; color: #cbd5e1; font-size: .9rem;">
+            JavaScript is required to load the intake terminal.
+            <a href="https://tally.so/r/VLZA4M" target="_blank" rel="noopener noreferrer" style="color: #93c5fd;">Use the direct registration form instead.</a>
+          </p>
+        </noscript>
       </div>
       <script>
         var d = document, w = "https://tally.so/widgets/embed.js", v = function () {
